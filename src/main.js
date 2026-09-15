@@ -238,8 +238,11 @@ function bindFileButtons() {
 
 async function uploadFiles(fileList, chapterId) {
   for (const file of [...fileList]) {
-    const safeName = file.name.replace(/[^\p{L}\p{N}._ -]/gu, "_");
-    const path = `${session.user.id}/${currentSubject.id}/${crypto.randomUUID()}-${safeName}`;
+    const extension = file.name.includes(".")
+  ? file.name.split(".").pop().toLowerCase()
+  : "";
+
+const path = `${session.user.id}/${currentSubject.id}/${crypto.randomUUID()}${extension ? `.${extension}` : ""}`;
     const { error: uploadError } = await supabase.storage.from("course-files").upload(path, file);
     if (uploadError) { alert(`Upload impossible : ${uploadError.message}`); continue; }
 
