@@ -1,0 +1,162 @@
+:root {
+  font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  color: #f4f5f7;
+  background: #0b0d12;
+  font-synthesis: none;
+}
+* { box-sizing: border-box; }
+body { margin: 0; min-width: 320px; min-height: 100vh; background:
+  radial-gradient(circle at 20% -10%, #202a4a 0, transparent 28rem),
+  #0b0d12; }
+button, input { font: inherit; }
+button { cursor: pointer; }
+.shell { max-width: 1180px; margin: auto; min-height: 100vh; padding: 0 22px 60px; }
+.topbar { height: 82px; display:flex; align-items:center; justify-content:space-between; border-bottom:1px solid #232733; }
+.brand { display:flex; align-items:center; gap:12px; cursor:pointer; }
+.logo, .big-logo { display:grid; place-items:center; background:#1b2130; border:1px solid #30384b; border-radius:14px; }
+.logo { width:44px; height:44px; }
+.big-logo { width:64px; height:64px; font-size:28px; margin:0 auto 22px; }
+.brand strong, .brand small { display:block; }
+.brand small { color:#858b99; margin-top:2px; }
+.content { padding-top:42px; }
+.page-title > div { display:flex; align-items:center; gap:14px; }
+.page-title h1 { margin:3px 0 0; font-size:clamp(28px,5vw,44px); letter-spacing:-.04em; }
+.eyebrow { margin:0; font-size:11px; letter-spacing:.16em; color:#858b99; font-weight:800; }
+.toolbar { display:flex; align-items:center; justify-content:space-between; gap:16px; margin:30px 0 26px; }
+.search { flex:1; max-width:520px; display:flex; align-items:center; gap:9px; background:#13161d; border:1px solid #272c38; border-radius:13px; padding:0 14px; }
+.search input { width:100%; height:46px; border:0; outline:0; background:transparent; color:#fff; }
+.primary, .secondary, .ghost, .back, .icon-button { border:0; color:#fff; }
+.primary { background:#5367f8; padding:13px 17px; border-radius:12px; font-weight:750; }
+.secondary { background:#1a1e28; border:1px solid #303644; padding:13px 17px; border-radius:12px; font-weight:700; }
+.ghost, .back, .icon-button { background:transparent; }
+.ghost { color:#aab0bd; }
+.back { font-size:26px; padding:8px; }
+.compact { padding:10px 13px; }
+.grid { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:14px; }
+.card { display:flex; align-items:center; gap:15px; background:#13161d; border:1px solid #272c38; border-radius:17px; padding:19px; transition:.16s ease; cursor:pointer; }
+.card:hover { transform:translateY(-2px); border-color:#3b4356; background:#171b24; }
+.card-icon, .file-icon { flex:0 0 auto; display:grid; place-items:center; width:46px; height:46px; border-radius:13px; background:#1d2230; font-size:21px; }
+.card h2 { font-size:16px; margin:0 0 5px; }
+.card p { color:#7f8797; margin:0; font-size:13px; }
+.grow { flex:1; min-width:0; }
+.icon-button { width:36px; height:36px; border-radius:10px; }
+.icon-button:hover { background:#252a35; }
+.danger:hover { background:#3b1f25; }
+.section-title { font-size:13px; color:#9da4b2; text-transform:uppercase; letter-spacing:.1em; margin:34px 0 13px; }
+.file-list { display:flex; flex-direction:column; gap:9px; }
+.file-row { display:flex; align-items:center; gap:13px; padding:13px; background:#13161d; border:1px solid #272c38; border-radius:14px; }
+.file-row strong, .file-row small { display:block; overflow:hidden; text-overflow:ellipsis; white-space:nowrap; }
+.file-row small { color:#7f8797; margin-top:4px; font-size:12px; }
+.empty { grid-column:1/-1; padding:46px 20px; text-align:center; color:#777f8f; border:1px dashed #303644; border-radius:16px; }
+.empty.small { padding:28px 20px; }
+.actions { display:flex; gap:9px; flex-wrap:wrap; }
+.upload-button { display:inline-block; cursor:pointer; }
+.muted { color:#858b99; }
+.notice, .message { color:#f3a9a9; }
+.auth-page { min-height:100vh; display:grid; place-items:center; padding:20px; }
+.auth-card { width:min(100%,420px); background:#11141b; border:1px solid #282d39; border-radius:24px; padding:34px; text-align:center; box-shadow:0 30px 80px rgba(0,0,0,.35); }
+.auth-card h1 { font-size:34px; margin:7px 0; letter-spacing:-.04em; }
+.auth-card form { margin-top:27px; text-align:left; display:flex; flex-direction:column; gap:13px; }
+.auth-card label { color:#aab0bd; font-size:13px; font-weight:650; }
+.auth-card input { width:100%; margin-top:7px; background:#0c0e13; border:1px solid #2c3240; color:#fff; border-radius:11px; padding:13px; outline:none; }
+.auth-card input:focus { border-color:#5367f8; }
+.auth-card form button { width:100%; }
+.message { min-height:20px; font-size:13px; margin-bottom:0; }
+
+/* PDF VIEWER */
+
+.pdf-page {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background: #0b0d12;
+}
+
+.pdf-header {
+  min-height: 68px;
+  display: flex;
+  align-items: center;
+  gap: 14px;
+
+  padding: 10px 20px;
+
+  background: #11141b;
+  border-bottom: 1px solid #272c38;
+}
+
+.pdf-back {
+  width: 42px;
+  height: 42px;
+
+  display: grid;
+  place-items: center;
+
+  border-radius: 10px;
+}
+
+.pdf-back:hover {
+  background: #202530;
+}
+
+.pdf-title {
+  min-width: 0;
+}
+
+.pdf-title strong,
+.pdf-title small {
+  display: block;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.pdf-title strong {
+  font-size: 15px;
+}
+
+.pdf-title small {
+  color: #858b99;
+  font-size: 12px;
+  margin-top: 3px;
+}
+
+.pdf-container {
+  flex: 1;
+  min-height: 0;
+}
+
+.pdf-viewer {
+  display: block;
+
+  width: 100%;
+  height: 100%;
+
+  border: 0;
+  background: white;
+}
+
+@media (max-width: 520px) {
+  .pdf-header {
+    min-height: 60px;
+    padding: 8px 10px;
+  }
+}
+
+@media (max-width: 780px) {
+  .grid { grid-template-columns:1fr; }
+  .toolbar { align-items:stretch; flex-direction:column; }
+  .search { max-width:none; }
+  .toolbar > .primary, .toolbar > .secondary { width:100%; }
+  .actions { display:grid; grid-template-columns:1fr 1fr; }
+}
+@media (max-width: 520px) {
+  .shell { padding:0 14px 40px; }
+  .topbar { height:68px; }
+  .content { padding-top:28px; }
+  .ghost span { display:none; }
+  .file-row { flex-wrap:wrap; }
+  .file-row .grow { width:calc(100% - 60px); }
+  .file-row .secondary { margin-left:59px; }
+  .actions { grid-template-columns:1fr; }
+  .auth-card { padding:27px 20px; }
+}
